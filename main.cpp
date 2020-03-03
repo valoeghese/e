@@ -61,7 +61,7 @@ int main() {
 int initialiseOpenGL() {
 	if (!glfwInit()) { // try initialise opengl. returns 0 if it cannot initialise
 		fprintf(stderr, "Failed to initialise GLFW!"); // If it cannot initialise print an error message to STDERR
-		return NULL; // return 0
+		return -1; // return -1
 	}
 
 	glfwWindowHint(GLFW_SAMPLES, antialiasing); // set the antialiasing amount
